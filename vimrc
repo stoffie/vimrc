@@ -1,15 +1,14 @@
 "set number
 "set colorcolumn=80
-set tabstop=4
+set tabstop=2
 "set noexpandtab
-"set expandtab
-"set shiftwidth=1
+set expandtab
+set shiftwidth=2
 "set softtabstop=1
 set scroll=10
 set scrolloff=10
 set list listchars=tab:»·,trail:·
 set t_Co=256
-"colorscheme jellybeans
 
 " Function keys
 nnoremap <F5> :call ColorColumnToggle()<CR>
@@ -45,13 +44,13 @@ inoremap <silent> <C-Down> <C-O>:wincmd j<CR>
 
 " Tabs
 map <silent> <C-T> :tabnew<CR>
-map <silent> <C-Q> :tabclose<CR>
+"map <silent> <C-Q> :tabclose<CR>
 "map <silent> <kPageUp> :tabprevious<CR>
 "map <silent> <kPageDown> :tabnext<CR>
 "map <silent> <Leader>H :tabprevious<CR>
 "map <silent> <Leader>L :tabnext<CR>
 imap <silent> <C-T> <C-O>:tabnew<CR>
-imap <silent> <C-Q> <C-O>:tabclose<CR>
+"imap <silent> <C-Q> <C-O>:tabclose<CR>
 "imap <silent> <kPageUp> <C-O>:tabprevious<CR>
 "imap <silent> <kPageDown> <C-O>:tabnext<CR>
 "map <silent> <C-H> :tabfirst<CR>
@@ -60,5 +59,6 @@ imap <silent> <C-Q> <C-O>:tabclose<CR>
 " very dangerous, automatically remove all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
+execute pathogen#infect()
 syntax on
 filetype plugin indent on
