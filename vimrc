@@ -62,3 +62,5 @@ autocmd BufWritePre * :%s/\s\+$//e
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+
+highlight clear SignColumn
