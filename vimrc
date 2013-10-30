@@ -1,3 +1,6 @@
+set nocompatible
+
+set mouse=a
 "set number
 "set colorcolumn=80
 set tabstop=2
@@ -64,8 +67,11 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-" fix theme and gitgutter
+" fix theme for gitgutter
 highlight clear SignColumn
 
-" lighline
+" lightline
 set laststatus=2
+
+" nurdtree
+let NERDTreeMinimalUI = 1
