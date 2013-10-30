@@ -59,8 +59,13 @@ imap <silent> <C-T> <C-O>:tabnew<CR>
 " very dangerous, automatically remove all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
+" load plugins hurrrr
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" fix theme and gitgutter
 highlight clear SignColumn
+
+" lighline
+set laststatus=2
