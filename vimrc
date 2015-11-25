@@ -13,6 +13,18 @@ set scrolloff=10
 set list listchars=tab:»·,trail:·
 set t_Co=256
 
+set wrap " wrap long line of text
+set linebreak " to re-flow long line of text instantly
+set textwidth=80
+set formatoptions-=l " http://goo.gl/RnL9DI
+set spell spelllang=en " docs here https://goo.gl/17dMm
+" ============== Backup/Swap/Undo directory
+set backup
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+set writebackup
+
 " Function keys
 nnoremap <F5> :call ColorColumnToggle()<CR>
 imap <F5> <C-o>:call ColorColumnToggle()<CR>
